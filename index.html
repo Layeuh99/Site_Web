@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urbatech - Bureau d'Études en Urbanisme</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <h1>Urbatech</h1>
+                    <span>Urbanisme & Aménagement</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#presentation" class="nav-link">Présentation</a></li>
+                    <li><a href="#projets-realises" class="nav-link">Projets Réalisés</a></li>
+                    <li><a href="#projets-cours" class="nav-link">Projets en cours</a></li>
+                    <li><a href="#presentations-pdf" class="nav-link">Presentations PDF</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="particles-container" id="particles"></div>
+            <div class="hero-gradient"></div>
+            <div class="hero-content">
+                <h2 class="animate__animated animate__fadeInDown">Urbatech</h2>
+                <p class="animate__animated animate__fadeInUp animate__delay-1s">Solutions innovantes pour la planification urbaine et l'aménagement durable</p>
+                <div class="hero-stats animate__animated animate__fadeInUp animate__delay-2s">
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="45">0</span>
+                        <span class="stat-label">Projets réalisés</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="5">0</span>
+                        <span class="stat-label">Années d'expérience</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="50">0</span>
+                        <span class="stat-label">Experts</span>
+                    </div>
+                </div>
+                <a href="#presentation" class="cta-button animate__animated animate__fadeInUp animate__delay-3s">
+                    <span>Découvrir nos missions</span>
+                    <i class="fas fa-arrow-down"></i>
+                </a>
+            </div>
+            <div class="scroll-indicator">
+                <div class="scroll-dot"></div>
+                <span>Scroll</span>
+            </div>
+        </section>
+
+        <!-- Section 1: Présentation du bureau d'études -->
+        <section id="presentation" class="section presentation">
+            <div class="container">
+                <h2 class="section-title">Présentation du Bureau d'Études</h2>
+                <div class="presentation-visual" data-aos="fade-left">
+                    <div class="presentation-image" data-aos="fade-left">
+                        <img src="images/bureau/URBATECH.jpeg" alt="Urbatech Bureau" class="img-fluid">
+                    </div>
+                    <div class="presentation-text" data-aos="fade-right">
+                            <div class="text-reveal">
+                                <h3 class="titre-blanc">Qui sommes-nous ?</h3>
+                                <p class="texte-blanc">Urbatech est un bureau d'études pluridisciplinaire spécialisé en urbanisme et aménagement du territoire. Notre équipe d'experts (urbanistes, architectes, géomaticiens, ingénieurs civils) apporte des solutions innovantes pour la planification urbaine et l'aménagement durable des communes et de leurs environs.</p>
+                            </div>
+                    </div>
+                </div>
+                <div class="missions-container">
+                    <p class="missions-kicker" data-aos="fade-up">Domaines d'intervention</p>
+                    <h3 data-aos="fade-up">Nos missions</h3>
+                    <div class="missions-grid">
+                        <div class="mission-card" data-aos="fade-up" data-aos-delay="100">
+                            <div class="mission-icon">
+                                <i class="fas fa-city"></i>
+                            </div>
+                            <h4>Planification urbaine</h4>
+                            <p>Stratégie et développement territorial</p>
+                        </div>
+                        <div class="mission-card" data-aos="fade-up" data-aos-delay="200">
+                            <div class="mission-icon">
+                                <i class="fas fa-leaf"></i>
+                            </div>
+                            <h4>Aménagement durable</h4>
+                            <p>Solutions écologiques innovantes</p>
+                        </div>
+                        <div class="mission-card" data-aos="fade-up" data-aos-delay="300">
+                            <div class="mission-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h4>Excellence & Innovation</h4>
+                            <p>25 ans d'expertise au service de l'aménagement urbain</p>
+                        </div>
+                        <div class="mission-card" data-aos="fade-up" data-aos-delay="400">
+                            <div class="mission-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <h4>Conseil expert</h4>
+                            <p>Accompagnement des collectivités</p>
+                        </div>
+                        <div class="mission-card" data-aos="fade-up" data-aos-delay="500">
+                            <div class="mission-icon">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <h4>Études d'impact</h4>
+                            <p>Analyse environnementale complète</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="equipe-section">
+                    <h3 data-aos="fade-up">Notre Équipe d'Experts</h3>
+                    <div class="equipe-slider">
+                        <div class="equipe-grid">
+                            <div class="equipe-membre" data-aos="zoom-in" data-aos-delay="100">
+                                <div class="membre-card-3d">
+                                    <div class="membre-image-container">
+                                        <img src="images/equipe/Mohamed Soumaré.jpeg" alt="Mohamed Soumaré">
+                                        <div class="membre-overlay">
+                                            <div class="social-links">
+                                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                                <a href="#"><i class="fas fa-envelope"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="membre-info">
+                                        <h4 class="titre-blanc">Mohamed Soumaré</h4>
+                                        <p class="texte-noir">Ingénieur Génie Hydraulique</p>
+                                        <div class="membre-skills">
+                                            <span class="skill-tag">Hydraulique</span>
+                                            <span class="skill-tag">Assainissement</span>
+                                            <span class="skill-tag">Zones Humides</span>
+                                        </div>
+                                        <div class="membre-profil">
+                                            <h5>Profil</h5>
+                                            <p>Mohamed Soumaré, ingénieur en génie hydraulique et assainissement avec 15 ans d'expérience intervient dans l'aménagement des zones humides, des infrastructures d'assainissement et des corridors bleus.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="equipe-membre" data-aos="zoom-in" data-aos-delay="200">
+                                <div class="membre-card-3d">
+                                    <div class="membre-image-container">
+                                        <img src="images/equipe/Mouhamadou Abib Ba.jpeg" alt="Mouhamadou Abib Ba">
+                                        <div class="membre-overlay">
+                                            <div class="social-links">
+                                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                                <a href="#"><i class="fas fa-envelope"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="membre-info">
+                                        <h4>Mouhamadou Abib Ba</h4>
+                                        <p>Expert SIG</p>
+                                        <div class="membre-skills">
+                                            <span class="skill-tag">SIG</span>
+                                            <span class="skill-tag">Télédétection</span>
+                                            <span class="skill-tag">Analyse Spatiale</span>
+                                        </div>
+                                        <div class="membre-profil">
+                                            <h5>Profil</h5>
+                                            <p>Mouhamadou Abib Ba est expert en Systèmes d'Information Géographique (SIG), spécialisé en analyse spatiale et en télédétection. Il accompagne le bureau d'études dans la production cartographique, la gestion et la numérisation foncière, contribuant efficacement à l'aide à la décision et aux projets d'aménagement du territoire.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="equipe-membre" data-aos="zoom-in" data-aos-delay="300">
+                                <div class="membre-card-3d">
+                                    <div class="membre-image-container">
+                                        <img src="http://localhost:8080/Site_Web/images/equipe/Urbaniste.jpg" alt="Serigne Saliou Mbengue" style="display:block; width:100%; height:auto; border-radius:8px;" loading="eager">
+                                        <div class="membre-overlay">
+                                            <div class="social-links">
+                                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                                <a href="#"><i class="fas fa-envelope"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="membre-info">
+                                        <h4>Serigne Saliou Mbengue</h4>
+                                        <p>Coordinateur Études</p>
+                                        <div class="membre-skills">
+                                            <span class="skill-tag">Planification</span>
+                                            <span class="skill-tag">Analyse Spatiale</span>
+                                            <span class="skill-tag">Aménagement</span>
+                                        </div>
+                                        <div class="membre-profil">
+                                            <h5>Profil</h5>
+                                            <p>Il assure la coordination générale des études et intervient sur : la planification urbaine et territoriale ; l'analyse spatiale et socio-économique ; l'élaboration de scénarios d'aménagement ; la cohérence globale des projets urbains.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="equipe-membre" data-aos="zoom-in" data-aos-delay="400">
+                                <div class="membre-card-3d">
+                                    <div class="membre-image-container">
+                                        <img src="images/equipe/Maguette Faye.jpeg" alt="Maguette Faye">
+                                        <div class="membre-overlay">
+                                            <div class="social-links">
+                                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                                <a href="#"><i class="fas fa-envelope"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="membre-info">
+                                        <h4>Maguette Faye</h4>
+                                        <p>Experte Gestion Déchets</p>
+                                        <div class="membre-skills">
+                                            <span class="skill-tag">Collecte</span>
+                                            <span class="skill-tag">Tri</span>
+                                            <span class="skill-tag">Valorisation</span>
+                                        </div>
+                                        <div class="membre-profil">
+                                            <h5>Profil</h5>
+                                            <p>Maguette Faye est experte en gestion des déchets, spécialisée dans la planification et l'optimisation des systèmes de collecte, de tri et de valorisation. Elle accompagne le bureau d'études dans l'élaboration de stratégies durables de gestion des déchets, contribuant à l'amélioration de la salubrité urbaine et à la protection de l'environnement.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="equipe-membre" data-aos="zoom-in" data-aos-delay="500">
+                                <div class="membre-card-3d">
+                                    <div class="membre-image-container">
+                                        <img src="images/equipe/Abdoulaye Gueye.jpeg" alt="Abdoulaye Gueye">
+                                        <div class="membre-overlay">
+                                            <div class="social-links">
+                                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                                <a href="#"><i class="fas fa-envelope"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="membre-info">
+                                        <h4>Abdoulaye Gueye</h4>
+                                        <p>Expert Mobilité & Transport</p>
+                                        <div class="membre-skills">
+                                            <span class="skill-tag">Déplacements</span>
+                                            <span class="skill-tag">Transport</span>
+                                            <span class="skill-tag">Mobilité Durable</span>
+                                        </div>
+                                        <div class="membre-profil">
+                                            <h5>Profil</h5>
+                                            <p>Abdoulaye Gueye est Expert en mobilité et transport urbain. Il intervient dans les domaines suivants : l'analyse des déplacements urbains ; la planification des réseaux de transport ; la promotion des mobilités durables ; l'amélioration de l'accessibilité et de la fluidité urbaine. Son objectif principal est d'organiser les déplacements afin de rendre la ville plus fonctionnelle, accessible et durable.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="equipe-membre" data-aos="zoom-in" data-aos-delay="600">
+                                <div class="membre-card-3d">
+                                    <div class="membre-image-container">
+                                        <img src="images/equipe/OPA Kane.jpeg" alt="OPA Kane">
+                                        <div class="membre-overlay">
+                                            <div class="social-links">
+                                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                                <a href="#"><i class="fas fa-envelope"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="membre-info">
+                                        <h4>OPA Kane</h4>
+                                        <p>Paysagiste</p>
+                                        <div class="membre-skills">
+                                            <span class="skill-tag">Paysage</span>
+                                            <span class="skill-tag">Espaces Verts</span>
+                                            <span class="skill-tag">Aménagement</span>
+                                        </div>
+                                        <div class="membre-profil">
+                                            <h5>Profil</h5>
+                                            <p>OPA Kane est paysagiste, spécialisé en conception et aménagement des espaces verts et publics. Il accompagne le bureau d'études dans la planification paysagère, l'intégration environnementale des projets et la valorisation esthétique des territoires, contribuant à créer des espaces fonctionnels, durables et harmonieux.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="partenaires-section">
+                    <h3>Nos Partenaires</h3>
+                    <div class="partenaires-grid">
+                        <div class="partenaire-logo" data-aos="zoom-in" data-aos-delay="100">
+                            <img src="images/partenaires/AGEROUTE.jpg" alt="AGEROUTE">
+                        </div>
+                        <div class="partenaire-logo" data-aos="zoom-in" data-aos-delay="200">
+                            <img src="images/partenaires/ANAT.jpg" alt="ANAT">
+                        </div>
+                        <div class="partenaire-logo" data-aos="zoom-in" data-aos-delay="300">
+                            <img src="images/partenaires/DGPU.jpg" alt="DGPU">
+                        </div>
+                        <div class="partenaire-logo" data-aos="zoom-in" data-aos-delay="400">
+                            <img src="images/partenaires/EIFFAGE.jpg" alt="EIFFAGE">
+                        </div>
+                        <div class="partenaire-logo" data-aos="zoom-in" data-aos-delay="500">
+                            <img src="images/partenaires/ODAS.jpg" alt="ODAS">
+                        </div>
+                        <div class="partenaire-logo" data-aos="zoom-in" data-aos-delay="600">
+                            <img src="images/partenaires/SENEGINDIA.jpg" alt="SENEGINDIA">
+                        </div>
+                        <div class="partenaire-logo" data-aos="zoom-in" data-aos-delay="700">
+                            <img src="images/partenaires/URBASEN.jpg" alt="URBASEN">
+                        </div>
+                        <div class="partenaire-logo" data-aos="zoom-in" data-aos-delay="800">
+                            <img src="images/partenaires/COMMUNE DE BARGNY.jpg" alt="COMMUNE DE BARGNY">
+                        </div>
+                        <div class="partenaire-logo" data-aos="zoom-in" data-aos-delay="900">
+                            <img src="images/partenaires/COMMUNE DE DIAMNIADIO.jpg" alt="COMMUNE DE DIAMNIADIO">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Projets réalisés -->
+        <section id="projets-realises" class="section projets-realises">
+            <div class="container">
+                <h2 class="section-title">Projets Réalisés</h2>
+                <p class="section-subtitle">Découvrez nos réalisations à travers notre carte interactive</p>
+                
+                <div class="carte-controls">
+                    <button id="btn-senegal" class="carte-btn active">France</button>
+                    <button id="btn-africa" class="carte-btn">Afrique</button>
+                </div>
+                <p class="video-links-title">Références visuelles des projets réalisés</p>
+                <div class="video-links-bar">
+                    <a class="video-link-btn" href="https://www.bing.com/videos/riverview/relatedvideo?q=am%C3%A9nagement+centre+ville+animation+3D+vid%C3%A9o&&mid=584C98FF76454A53DB33584C98FF76454A53DB33&churl=https%3A%2F%2Fwww.youtube.com%2Fchannel%2FUCQtJ5b4c1E0aRo9C6X9RWsQ&FORM=VRDGAR" target="_blank" rel="noopener noreferrer">Référence visuelle 01 - Réaménagement du centre-ville</a>
+                    <a class="video-link-btn" href="https://www.bing.com/videos/riverview/relatedvideo?q=am%C3%A9nagement+ZAC+ECOLOGIQUE+3D+COURTE+vid%C3%A9o&&mid=718395C29859E061299D718395C29859E061299D&churl=https%3A%2F%2Fwww.youtube.com%2Fchannel%2FUCEP3fNUqpLKh2PGIXlXHy6w&FORM=VRDGAR" target="_blank" rel="noopener noreferrer">Référence visuelle 02 - Aménagement de ZAC écologique</a>
+                    <a class="video-link-btn" href="https://www.bing.com/videos/riverview/relatedvideo?q=am%C3%A9nagement+ZAC+ECOLOGIQUE+3D+COURTE+vid%C3%A9o&&mid=718395C29859E061299D718395C29859E061299D&churl=https%3A%2F%2Fwww.youtube.com%2Fchannel%2FUCEP3fNUqpLKh2PGIXlXHy6w&FORM=VRDGAR" target="_blank" rel="noopener noreferrer">Référence visuelle 03 - Scénario d'aménagement durable</a>
+                </div>
+                
+                <div class="carte-container">
+                    <div id="carte-projets" class="carte"></div>
+                    <div id="carte-africa" class="carte" style="display: none;"></div>
+                    <div class="carte-legend">
+                        <h4>Légende</h4>
+                        <div class="legend-item">
+                            <span class="legend-marker urbanisme"></span>
+                            <span>Urbanisme</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-marker aménagement"></span>
+                            <span>Aménagement</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-marker environnement"></span>
+                            <span>Environnement</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="projet-details" class="projet-details hidden">
+                    <button class="close-details">&times;</button>
+                    <div class="projet-content">
+                        <h3 id="projet-titre"></h3>
+                        <div class="projet-info">
+                            <p><strong>Localisation :</strong> <span id="projet-localisation"></span></p>
+                            <p><strong>Date :</strong> <span id="projet-date"></span></p>
+                            <p><strong>Type :</strong> <span id="projet-type"></span></p>
+                        </div>
+                        <div class="projet-description">
+                            <h4>Description</h4>
+                            <p id="projet-description-text"></p>
+                        </div>
+                        <div class="projet-photos">
+                            <h4>Photos du projet</h4>
+                            <div id="projet-gallery"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Projets en cours -->
+        <section id="projets-cours" class="section projets-cours">
+            <div class="container">
+                <h2 class="section-title">Projets en cours</h2>
+                <p class="section-subtitle">Decouvrez nos propositions d'amenagement actuelles</p>
+                
+                <div class="projets-cours-grid">
+                    <div class="projet-cours-card">
+                        <div class="card-header">
+                            <h3>Reamenagement Centre-Ville</h3>
+                            <span class="statut en-cours">En cours</span>
+                        </div>
+                        <div class="card-content">
+                            <p>Projet de reamenagement complet du centre-ville avec creation d'espaces pietons, pistes cyclables, vegetalisation extensive et amelioration de l'accessibilite pour les personnes a mobilite reduite. Le projet inclut l'installation de nouveaux mobiliers urbains, la creation de zones de rencontre et la valorisation du patrimoine architectural existant.</p>
+                        </div>
+                    </div>
+
+                    <div class="projet-cours-card">
+                        <div class="card-header">
+                            <h3>ZAC Ecologique Nord</h3>
+                            <span class="statut en-cours">En cours</span>
+                        </div>
+                        <div class="card-content">
+                            <p>Developpement d'une zone d'amenagement concerte de 25 hectares axee sur l'ecologie et les energies renouvelables. Le projet integre des logements a haute performance energetique, des commerces de proximite, des espaces verts connectes, des systemes de gestion des eaux pluviales et des infrastructures de transport doux pour creer un ecoquartier exemplaire.</p>
+                        </div>
+                    </div>
+
+                    <div class="projet-cours-card">
+                        <div class="card-header">
+                            <h3>Trame Verte Urbaine</h3>
+                            <span class="statut etude">En etude</span>
+                        </div>
+                        <div class="card-content">
+                            <p>Etude strategique pour la creation d'un reseau de corridors ecologiques traversant l'agglomeration afin de reconnecter les espaces naturels fragmentes. Le projet vise a preserver la biodiversite, a creer des continuites ecologiques pour la faune et la flore, a ameliorer la qualite de l'air et a offrir aux habitants des espaces de recreation et de connexion avec la nature en milieu urbain.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Presentations PDF -->
+        <section id="presentations-pdf" class="section projets-cours">
+            <div class="container">
+                <h2 class="section-title">Presentations PDF</h2>
+                <p class="section-subtitle">Consultez la presentation sans quitter le site</p>
+                <div class="projets-cours-grid">
+                    <div class="projet-cours-card">
+                        <div class="card-header">
+                            <h3>Presentation PDF</h3>
+                        </div>
+                        <div class="card-content">
+                            <p>Consultez la presentation complete directement sur le site.</p>
+                            <div class="projet-pdf-inline">
+                                <iframe
+                                    src="documents/presentations/URBA-TECH.pdf#view=FitH"
+                                    title="Presentation URBA-TECH"
+                                    loading="lazy">
+                                </iframe>
+                            </div>
+                            <div class="projet-actions">
+                                <button class="btn-view-ppt" data-projet="presentation-pdf">
+                                    <i class="fas fa-file-pdf"></i> Ouvrir le PDF
+                                </button>
+                                <button class="btn-download" data-projet="presentation-pdf">
+                                    <i class="fas fa-download"></i> Telecharger
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="projet-cours-card">
+                        <div class="card-header">
+                            <h3>Proposition d'amenagement</h3>
+                        </div>
+                        <div class="card-content">
+                            <p>Video de presentation d'Urbatech.</p>
+                            <div class="projet-video">
+                                <video controls preload="metadata" poster="images/bureau/URBATECH.jpeg">
+                                    <source src="documents/Video/proposition d'aménagement.mp4" type="video/mp4">
+                                    Votre navigateur ne prend pas en charge la lecture video.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Modal PowerPoint -->
+        <div id="ppt-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <div id="ppt-viewer">
+                    <!-- PowerPoint viewer will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>Urbatech</h3>
+                    <p>Bureau d'études en urbanisme et aménagement du territoire</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Cité Keur Gorgui<br>Dakar 10700, Sénégal</p>
+                    <p><i class="fas fa-phone"></i> +221 77 123 45 67</p>
+                    <p><i class="fas fa-envelope"></i> contact@urbatech.sn</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Liens utiles</h4>
+                    <ul>
+                        <li><a href="#presentation">Présentation</a></li>
+                        <li><a href="#projets-realises">Projets réalisés</a></li>
+                        <li><a href="#projets-cours">Projets en cours</a></li>
+                        <li><a href="#presentations-pdf">Presentations PDF</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Urbatech. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- ÉLÉMENT DE DEBUG -->
+    <!-- <div class="debug-test">CSS TEST - Si vous voyez ce texte, le CSS fonctionne !</div> -->
+    <!-- <div class="test-profil">TEST PROFIL - Texte rouge sur fond blanc</div> -->
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/main.js?v=20260221-8"></script>
+    <script src="js/map-simulated-data.js"></script>
+</body>
+</html>
+
+
+
+
